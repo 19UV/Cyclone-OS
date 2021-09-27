@@ -1,18 +1,18 @@
 name: Build Operating System
 on:
-	push:
-		branches:
-			- main
+  push:
+    branches:
+      - main
 jobs:
-	Compile-Operating-System:
-		runs-on: ubuntu-latest
-		steps:
-		 - uses: actions/checkout@v2
-		 - name: Setup (Build Cross Compiler)
-		   run: ./scripts/setup.sh
-		 - name: Build Kernel & Package in ISO
-		   run: ./scripts/build.sh
-		 - uses: actions/upload-artifact@v2
-		   with:
-			name: cyclone-os
-			path: cyclone.iso
+  Compile-Operating-System:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup (Build Cross Compiler)
+        run: ./scripts/setup.sh
+      - name: Build Kernel & Package in ISO
+        run: ./scripts/build.sh
+      - uses: actions/upload-artifact@v2
+        with:
+          name: cyclone-os
+          path: cyclone.iso
