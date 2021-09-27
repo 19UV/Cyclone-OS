@@ -6,9 +6,8 @@ BASE_DIRECTORY=$(pwd)
 # Building the Cross Compiler #
 ###############################
 
-PREFIX="$BASE_DIRECTORY/compiler"
-TARGET=i686-elf
-
+export PREFIX="$BASE_DIRECTORY/compiler"
+export TARGET=i686-elf
 export PATH="$PREFIX/bin:$PATH"
 
 mkdir -p $BASE_DIRECTORY/compiler
