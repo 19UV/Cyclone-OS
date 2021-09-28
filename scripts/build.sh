@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 OS_NAME=cyclone
 BIN_NAME=$OS_NAME.bin

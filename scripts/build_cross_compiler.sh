@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 BASE_DIRECTORY=$(pwd)
 
@@ -28,7 +29,7 @@ which -- $TARGET-as || (echo "$TARGET-as is not in the PATH" && exit 1)
 
 cd $BASE_DIRECTORY/build_cross/build_gcc
 ../gcc/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --enable-languages=c --without-headers
-make all-gcc && make all-target-libgcc && make install-gcc make install-target-libgcc
+make all-gcc && make all-target-libgcc && make install-gcc && make install-target-libgcc
 
 cd $BASE_DIRECTORY
 
