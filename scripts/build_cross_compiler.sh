@@ -35,3 +35,6 @@ cd $BASE_DIRECTORY
 
 # Cleanup
 rm -rf $BASE_DIRECTORY/build_cross
+
+tree .
+echo $PATH
