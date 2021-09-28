@@ -1,8 +1,5 @@
 #!/bin/sh
 
-echo "$PATH"
-ls -la compiler/
-
 OS_NAME=cyclone
 BIN_NAME=$OS_NAME.bin
 ISO_NAME=$OS_NAME.iso
