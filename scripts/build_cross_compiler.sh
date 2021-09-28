@@ -11,11 +11,8 @@ export TARGET=i686-elf
 export PATH="$PREFIX/bin:$PATH"
 
 mkdir -p $BASE_DIRECTORY/compiler
-mkdir $BASE_DIRECTORY/build_cross/build_binutils
-mkdir $BASE_DIRECTORY/build_cross/build_gcc
-
-tree
-exit 0
+mkdir -p $BASE_DIRECTORY/build_cross/build_binutils
+mkdir -p $BASE_DIRECTORY/build_cross/build_gcc
 
 # Downloading Source Code
 git clone git://sourceware.org/git/binutils-gdb.git $BASE_DIRECTORY/build_cross/binutils
