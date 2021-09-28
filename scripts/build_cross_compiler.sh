@@ -9,8 +9,8 @@ BASE_DIRECTORY=$(pwd)
 
 export PREFIX="$BASE_DIRECTORY/compiler"
 export TARGET=i686-elf
-# TODO: Check if Github Runner
-# export PATH="$PREFIX/bin:$PATH"
+# TODO: Check if Github Runner, and only add to github path if runner
+export PATH="$PREFIX/bin:$PATH"
 echo "$PREFIX/bin:$PATH" >> $GITHUB_PATH
 
 mkdir -p $BASE_DIRECTORY/compiler
